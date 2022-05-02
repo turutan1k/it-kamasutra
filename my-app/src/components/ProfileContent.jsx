@@ -1,8 +1,9 @@
 import React from 'react';
+import classes from './ProfileContent.module.css';
 
 const ProfileContent = () => {
     return (
-        <div className="content">
+        <div className={classes.content}>
             <div>
                 <img
                     alt="banner"
@@ -16,11 +17,11 @@ const ProfileContent = () => {
                 />
             </div>
             <div>
-                my posts
-                <div>
-                    new post
-                    <div>post 1</div>
-                    <div>post 1</div>
+                My posts
+                <div className={classes.posts}>
+                    New post
+                    <div className={classes.item}>post 1</div>
+                    <div className={classes.item}>post 2</div>
                 </div>
             </div>
         </div>

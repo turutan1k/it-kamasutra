@@ -1,12 +1,13 @@
 import React from 'react';
+import HeaderLogo from './../images/logo.png';
+import classes from './Header.module.css';
 
 const Header = () => {
     return (
-        <header className="header">
-            <img
-                alt="logo"
-                src="https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo-700x394.png"
-            />
+        <header className={classes.header}>
+            <div>
+                <img alt="logo" src={HeaderLogo} />
+            </div>
             <div>Social Network</div>
             <div></div>
         </header>
