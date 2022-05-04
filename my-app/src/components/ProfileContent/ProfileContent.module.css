@@ -4,6 +4,7 @@
     box-shadow: 0px 0px 10px rgb(70, 70, 255);
 }
 
-.item {
-    color: red;
+.banner {
+    width: 100%;
+    margin-bottom: 10px;
 }
