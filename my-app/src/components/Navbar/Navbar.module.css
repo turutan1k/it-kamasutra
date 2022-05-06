@@ -5,9 +5,13 @@
 }
 
 .item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     padding: 5px;
 }
 .item a {
+    margin-left: 10px;
     font-family: 'Orelega One', cursive;
     text-decoration: none;
     font-size: 20px;

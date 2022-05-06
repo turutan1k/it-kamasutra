@@ -1,24 +1,35 @@
 import React from 'react';
 import classes from './Navbar.module.css';
 
+import { SkinFilled } from '@ant-design/icons';
+import { MessageFilled } from '@ant-design/icons';
+import { ReadFilled } from '@ant-design/icons';
+import { CustomerServiceFilled } from '@ant-design/icons';
+import { SettingFilled } from '@ant-design/icons';
+
 const Navbar = () => {
     return (
         <nav className={classes.nav}>
             <div>
                 <div className={classes.item}>
-                    <a href="/#">Profile</a>
+                    <SkinFilled style={{ color: '#fff' }} />
+                    <a href="/profile">Profile</a>
                 </div>
                 <div className={classes.item}>
-                    <a href="/#">Messages</a>
+                    <MessageFilled style={{ color: '#fff' }} />
+                    <a href="/dialogs">Messages</a>
                 </div>
                 <div className={classes.item}>
-                    <a href="/#">News</a>
+                    <ReadFilled style={{ color: '#fff' }} />
+                    <a href="/news">News</a>
                 </div>
                 <div className={classes.item}>
-                    <a href="/#">Music</a>
+                    <CustomerServiceFilled style={{ color: '#fff' }} />
+                    <a href="/music">Music</a>
                 </div>
                 <div className={classes.item}>
-                    <a href="/#">Settings</a>
+                    <SettingFilled style={{ color: '#fff' }} />
+                    <a href="/settings">Settings</a>
                 </div>
             </div>
         </nav>

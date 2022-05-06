@@ -1,15 +1,17 @@
 import React from 'react';
-import HeaderLogo from '../../images/logo.png';
 import classes from './Header.module.css';
+import { DribbbleSquareFilled } from '@ant-design/icons';
 
 const Header = () => {
     return (
         <header className={classes.header}>
             <div>
-                <img alt="logo" src={HeaderLogo} />
+                <DribbbleSquareFilled style={{ width: '50px' }} />
             </div>
             <div>Social Network</div>
-            <div></div>
+            <div>
+                <DribbbleSquareFilled style={{ width: '50px' }} />
+            </div>
         </header>
     );
 };

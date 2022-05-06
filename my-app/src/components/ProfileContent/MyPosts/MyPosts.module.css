@@ -1,0 +1,9 @@
+div textarea {
+    width: 100%;
+    resize: none;
+    overflow: auto;
+    border-radius: 10px;
+    outline: none;
+    -moz-appearance: none;
+    border: 1px solid blue;
+}

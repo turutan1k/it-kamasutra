@@ -1,16 +1,19 @@
 import React from 'react';
 import classes from './Post.module.css';
 
-const Post = () => {
+const Post = (props) => {
+    console.log(props.message);
+
     return (
         <div className={classes.item}>
             <img
                 src="https://cdn-icons-png.flaticon.com/512/147/147144.png"
                 alt="avatar"
             />
-            <div className={classes.item}>post 1</div>
+            {props.message}
             <div>
-                <span>Like</span>
+                <span>Likes</span>
+                {props.likesCount}
             </div>
         </div>
     );
