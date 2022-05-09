@@ -2,10 +2,15 @@ div textarea {
     width: 100%;
     resize: none;
     overflow: auto;
-    border-radius: 10px;
     outline: none;
     -moz-appearance: none;
-    border: 1px solid blue;
+    background-color: rgba(0, 0, 142);
+    color: #fff;
+    border: none;
+}
+
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
 }
 div {
     font-family: 'Orelega One', cursive;

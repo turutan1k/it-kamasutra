@@ -11,11 +11,11 @@
     padding: 10px;
 }
 
-.dialogsItems .active{
-
+.dialogsItems .active {
 }
 
 .messages {
+    background-color: blue;
 }
 
 .messages .message {
@@ -23,7 +23,7 @@
 }
 
 .dialogsItems .dialog:hover {
-    cursor:pointer;
+    cursor: pointer;
     background-color: blue;
     transition: 0.2s linear;
 }
