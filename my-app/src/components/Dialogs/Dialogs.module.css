@@ -1,4 +1,29 @@
-div {
+.dialogs {
     font-family: 'Orelega One', cursive;
     font-family: 'Pridi', serif;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    color: #fff;
+}
+
+.dialogsItems .dialog {
+    padding: 10px;
+}
+
+.dialogsItems .active{
+
+}
+
+.messages {
+}
+
+.messages .message {
+    padding: 10px;
+}
+
+.dialogsItems .dialog:hover {
+    cursor:pointer;
+    background-color: blue;
+    transition: 0.2s linear;
 }
