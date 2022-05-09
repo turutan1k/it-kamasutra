@@ -8,14 +8,22 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 5px;
-}
-.item a {
-    margin-left: 10px;
+    padding: 5px 30px 5px 5px;
     font-family: 'Orelega One', cursive;
     text-decoration: none;
     font-size: 20px;
     color: #fff;
+}
+
+.active {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 30px 5px 5px;
+    font-family: 'Orelega One', cursive;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(70, 70, 255);
 }
 
 .item:hover {

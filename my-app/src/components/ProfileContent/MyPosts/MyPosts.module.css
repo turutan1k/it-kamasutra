@@ -7,3 +7,7 @@ div textarea {
     -moz-appearance: none;
     border: 1px solid blue;
 }
+div {
+    font-family: 'Orelega One', cursive;
+    font-family: 'Pridi', serif;
+}
