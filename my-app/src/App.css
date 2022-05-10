@@ -25,7 +25,13 @@ dl,
 dd {
     margin: 0;
 }
-
+li {
+    list-style-type: none;
+}
+ul {
+    margin-left: 0;
+    padding-left: 0;
+}
 body {
     min-height: 100vh;
     scroll-behavior: smooth;
