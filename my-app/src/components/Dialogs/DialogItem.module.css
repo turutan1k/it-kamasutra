@@ -1,0 +1,22 @@
+.dialog:hover {
+    cursor: pointer;
+    background-color: blue;
+    transition: 0.2s linear;
+}
+
+.dialog {
+    padding: 10px;
+}
+
+.dialog a {
+    text-decoration: none;
+    color: rgba(255, 255, 255);
+    opacity: 0.5;
+}
+
+.dialog a:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255);
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
