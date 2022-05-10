@@ -16,3 +16,23 @@ div {
     font-family: 'Orelega One', cursive;
     font-family: 'Pridi', serif;
 }
+
+.postsBlock {
+    padding: 10px;
+}
+
+.newPost {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    height: 30px;
+    border: none;
+    background-color: rgba(0, 0, 200);
+    color: #fff;
+}
+
+.posts {
+    margin-top: 10px;
+}

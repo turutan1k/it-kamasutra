@@ -1,0 +1,12 @@
+.banner {
+    width: 100%;
+    margin-bottom: 10px;
+}
+div {
+    font-family: 'Orelega One', cursive;
+    font-family: 'Pridi', serif;
+}
+
+.descriptionBlock {
+    padding: 10px;
+}
