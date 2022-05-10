@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Navbar.module.css';
+import styles from './Navbar.module.css';
 
 import { SkinFilled } from '@ant-design/icons';
 import { MessageFilled } from '@ant-design/icons';
@@ -10,24 +10,24 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className={classes.nav}>
-            <div>
-                <div>
+        <nav className={styles.nav}>
+            <ul>
+                <li>
                     <NavLink
                         to="/profile"
                         className={(navData) =>
-                            navData.isActive ? classes.active : classes.item
+                            navData.isActive ? styles.active : styles.item
                         }
                     >
                         <SkinFilled style={{ color: '#fff', padding: '5px' }} />
                         Profile
                     </NavLink>
-                </div>
-                <div>
+                </li>
+                <li>
                     <NavLink
                         to="/dialogs"
                         className={(navData) =>
-                            navData.isActive ? classes.active : classes.item
+                            navData.isActive ? styles.active : styles.item
                         }
                     >
                         <MessageFilled
@@ -35,23 +35,23 @@ const Navbar = () => {
                         />
                         Messages
                     </NavLink>
-                </div>
-                <div>
+                </li>
+                <li>
                     <NavLink
                         to="/news"
                         className={(navData) =>
-                            navData.isActive ? classes.active : classes.item
+                            navData.isActive ? styles.active : styles.item
                         }
                     >
                         <ReadFilled style={{ color: '#fff', padding: '5px' }} />
                         News
                     </NavLink>
-                </div>
-                <div>
+                </li>
+                <li>
                     <NavLink
                         to="/music"
                         className={(navData) =>
-                            navData.isActive ? classes.active : classes.item
+                            navData.isActive ? styles.active : styles.item
                         }
                     >
                         <CustomerServiceFilled
@@ -59,12 +59,12 @@ const Navbar = () => {
                         />
                         Music
                     </NavLink>
-                </div>
-                <div>
+                </li>
+                <li>
                     <NavLink
                         to="/settings"
                         className={(navData) =>
-                            navData.isActive ? classes.active : classes.item
+                            navData.isActive ? styles.active : styles.item
                         }
                     >
                         <SettingFilled
@@ -72,8 +72,8 @@ const Navbar = () => {
                         />
                         Settings
                     </NavLink>
-                </div>
-            </div>
+                </li>
+            </ul>
         </nav>
     );
 };

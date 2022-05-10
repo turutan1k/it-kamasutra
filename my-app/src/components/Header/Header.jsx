@@ -1,17 +1,17 @@
 import React from 'react';
-import classes from './Header.module.css';
+import styles from './Header.module.css';
 import { DribbbleSquareFilled } from '@ant-design/icons';
 
 const Header = () => {
     return (
-        <header className={classes.header}>
-            <div>
+        <header className={styles.header}>
+            <i>
                 <DribbbleSquareFilled style={{ width: '50px' }} />
-            </div>
+            </i>
             <div>Social Network</div>
-            <div>
+            <i>
                 <DribbbleSquareFilled style={{ width: '50px' }} />
-            </div>
+            </i>
         </header>
     );
 };
