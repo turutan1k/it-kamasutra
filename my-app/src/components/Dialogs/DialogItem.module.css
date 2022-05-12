@@ -6,17 +6,13 @@
 
 .dialog {
     padding: 10px;
+    color: #fff;
 }
 
-.dialog a {
-    text-decoration: none;
-    color: rgba(255, 255, 255);
-    opacity: 0.5;
+.active {
+    background-color: #fff;
 }
 
-.dialog a:hover {
-    text-decoration: none;
-    color: rgba(255, 255, 255);
-    transition: 0.5s ease-in-out;
-    opacity: 1;
+.none{
+    font-size:30;
 }

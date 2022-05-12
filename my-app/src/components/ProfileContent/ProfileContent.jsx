@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from './ProfileContent.module.css';
+// import styles from './ProfileContent.module.css';
 import { MyPosts } from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const ProfileContent = () => {
+const ProfileContent = (props) => {
     return (
         <>
             <ProfileInfo />
-            <MyPosts />
+            <MyPosts posts={props.state.posts} />
         </>
     );
 };

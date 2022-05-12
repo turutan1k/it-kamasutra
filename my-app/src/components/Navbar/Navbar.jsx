@@ -14,7 +14,7 @@ const Navbar = () => {
             <ul>
                 <li>
                     <NavLink
-                        to="/profile"
+                        to="/"
                         className={(navData) =>
                             navData.isActive ? styles.active : styles.item
                         }

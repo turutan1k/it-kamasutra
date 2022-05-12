@@ -1,76 +1,116 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
 *,
-*::before,
-*::after {
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-ul[class],
-ol[class] {
-    padding: 0;
+:focus,
+:active {
+    outline: none;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-    margin: 0;
-}
-li {
-    list-style-type: none;
-}
-ul {
-    margin-left: 0;
-    padding-left: 0;
-}
-body {
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+a:focus,
+a:active {
+    outline: none;
 }
 
-ul[class],
-ol[class] {
-    list-style: none;
+a,
+a:visited {
+    text-decoration: none;
 }
 
-a:not([class]) {
-    text-decoration-skip-ink: auto;
+a:hover {
+    text-decoration: none;
 }
 
-img {
-    max-width: 100%;
+nav,
+footer,
+header,
+aside {
     display: block;
 }
 
-article > * + * {
-    margin-top: 1em;
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
 }
 
 input,
 button,
-textarea,
-select {
-    font: inherit;
+textarea {
+    font-family: inherit;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    -ms-interpolation-mode: nearest-neighbor; /* IE */
+    image-rendering: crisp-edges; /* Стандартное свойство */
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+i {
+    font-style: normal;
 }
 
 .app-wrapper {

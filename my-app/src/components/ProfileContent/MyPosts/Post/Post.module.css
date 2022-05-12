@@ -1,5 +1,8 @@
 .item {
-    color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
 }
 
 .item img {
@@ -12,4 +15,13 @@
 button {
     font-size: 12px;
     cursor: pointer;
+}
+
+.post {
+    background-color: rgb(0 0 200);
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
