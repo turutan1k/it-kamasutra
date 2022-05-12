@@ -12,11 +12,12 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 
 function App(props) {
+    debugger;
     return (
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header />
-                <Navbar />
+                <Navbar state={props.state.sideBar} />
                 <div className="app-wrapper-content">
                     <Routes>
                         <Route

@@ -1,14 +1,18 @@
 import React from 'react';
 import styles from './Navbar.module.css';
 
-import { SkinFilled } from '@ant-design/icons';
-import { MessageFilled } from '@ant-design/icons';
-import { ReadFilled } from '@ant-design/icons';
-import { CustomerServiceFilled } from '@ant-design/icons';
-import { SettingFilled } from '@ant-design/icons';
+import {
+    AliwangwangFilled,
+    SkinFilled,
+    MessageFilled,
+    ReadFilled,
+    CustomerServiceFilled,
+    SettingFilled,
+} from '@ant-design/icons';
 import { NavLink } from 'react-router-dom';
+import Friends from './Friends/Friends';
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <nav className={styles.nav}>
             <ul>
@@ -72,6 +76,15 @@ const Navbar = () => {
                         />
                         Settings
                     </NavLink>
+                </li>
+                <li className={styles.friends}>
+                    <div className={styles.item}>
+                        <AliwangwangFilled
+                            style={{ color: '#fff', padding: '5px' }}
+                        />
+                        Friends:
+                    </div>
+                    <Friends friends={props.state.friends} />
                 </li>
             </ul>
         </nav>

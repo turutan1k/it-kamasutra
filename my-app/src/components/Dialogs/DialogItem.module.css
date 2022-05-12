@@ -1,10 +1,10 @@
 .dialog:hover {
-    cursor: pointer;
     background-color: blue;
     transition: 0.2s linear;
 }
 
 .dialog {
+    cursor: pointer;
     padding: 10px;
     color: #fff;
 }
@@ -13,6 +13,6 @@
     background-color: #fff;
 }
 
-.none{
-    font-size:30;
+.none {
+    font-size: 30;
 }

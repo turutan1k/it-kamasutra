@@ -1,0 +1,20 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    height: 50px;
+    width: 50px;
+}
+
+.name {
+    font-size: 12px;
+}
+
+.img:hover{
+    color:blue;
+    transition: 0.3s linear;
+}
