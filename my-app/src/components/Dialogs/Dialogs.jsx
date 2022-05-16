@@ -2,8 +2,15 @@ import React from 'react';
 import styles from './Dialogs.module.css';
 import DialogItem from './DialogItem';
 import Message from './Message';
+import { Button } from 'antd';
+import { RightCircleFilled } from '@ant-design/icons';
 
 export const Dialogs = (props) => {
+    let newMessageElement = React.useRef();
+    let addMessage = () => {
+        let text = newMessageElement.current.value;
+        alert(text);
+    };
     //*dialogs.map
     let dialogsElements = props.state.dialogs.map((d) => (
         <DialogItem name={d.name} id={d.id} key={d.id} />
@@ -15,8 +22,19 @@ export const Dialogs = (props) => {
 
     return (
         <div className={styles.dialogs}>
-            <ul>{dialogsElements}</ul>
-            <ul className={styles.messages}>{messagesElements}</ul>
+            <ul className={styles.dialogsElements}>{dialogsElements}</ul>
+            <ul className={styles.messagesElements}>{messagesElements}</ul>
+            <div></div>
+            <div className={styles.messages}>
+                <textarea
+                    ref={newMessageElement}
+                    placeholder="Write a message..."
+                    className={styles.messageTextarea}
+                ></textarea>
+                <Button className={styles.messageButton} onClick={addMessage}>
+                    <RightCircleFilled />
+                </Button>
+            </div>
         </div>
     );
 };

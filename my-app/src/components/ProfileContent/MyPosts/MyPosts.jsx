@@ -5,17 +5,28 @@ import Post from './Post/Post';
 import { Button } from 'antd';
 
 export const MyPosts = (props) => {
-    
     let postsElements = props.posts.map((p) => (
-        <Post message={p.message} likesCount={p.likesCount} key={p.id}/>
+        <Post message={p.message} likesCount={p.likesCount} key={p.id} />
     ));
+    let newPostElement = React.useRef();
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    };
 
     return (
         <div className={styles.postsBlock}>
             <h3>My posts</h3>
             <div className={styles.newPost}>
-                <textarea placeholder="Write a description below..."></textarea>
-                <Button>Add post</Button>
+                <div className={styles.textArea}>
+                    <textarea
+                        ref={newPostElement}
+                        placeholder="Write your description here..."
+                        minLength={1}
+                        maxLength={500}
+                    ></textarea>
+                </div>
+                <Button onClick={addPost}>Add post</Button>
             </div>
             <div className={styles.posts}>{postsElements}</div>
         </div>
