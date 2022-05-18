@@ -21,6 +21,11 @@
     width: 40px;
     height: 40px;
     padding: 10px;
+    background-color: #00008e;
+}
+
+.messageButton:hover {
+    transition: 0.2s linear;
     background-color: rgba(0, 0, 125);
 }
 

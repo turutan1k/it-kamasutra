@@ -24,6 +24,7 @@ function App(props) {
                             element={
                                 <ProfileContent
                                     state={props.state.profilePage}
+                                    addPost={props.addPost}
                                 />
                             }
                         />

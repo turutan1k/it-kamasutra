@@ -5,13 +5,15 @@ import Post from './Post/Post';
 import { Button } from 'antd';
 
 export const MyPosts = (props) => {
+    debugger;
     let postsElements = props.posts.map((p) => (
         <Post message={p.message} likesCount={p.likesCount} key={p.id} />
     ));
     let newPostElement = React.useRef();
     let addPost = () => {
         let text = newPostElement.current.value;
-        alert(text);
+        props.addPost(text);
+        newPostElement.current.value = ''
     };
 
     return (

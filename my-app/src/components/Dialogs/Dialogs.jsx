@@ -3,7 +3,7 @@ import styles from './Dialogs.module.css';
 import DialogItem from './DialogItem';
 import Message from './Message';
 import { Button } from 'antd';
-import { RightCircleFilled } from '@ant-design/icons';
+import {RightCircleOutlined } from '@ant-design/icons';
 
 export const Dialogs = (props) => {
     let newMessageElement = React.useRef();
@@ -32,7 +32,7 @@ export const Dialogs = (props) => {
                     className={styles.messageTextarea}
                 ></textarea>
                 <Button className={styles.messageButton} onClick={addMessage}>
-                    <RightCircleFilled />
+                    <RightCircleOutlined />
                 </Button>
             </div>
         </div>
