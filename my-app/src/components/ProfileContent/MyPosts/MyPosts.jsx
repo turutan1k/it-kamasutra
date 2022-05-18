@@ -5,15 +5,17 @@ import Post from './Post/Post';
 import { Button } from 'antd';
 
 export const MyPosts = (props) => {
-    debugger;
     let postsElements = props.posts.map((p) => (
         <Post message={p.message} likesCount={p.likesCount} key={p.id} />
     ));
     let newPostElement = React.useRef();
     let addPost = () => {
+        props.addPost();
+    };
+
+    let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.addPost(text);
-        newPostElement.current.value = ''
+        props.updateNewPostText(text);
     };
 
     return (
@@ -22,11 +24,11 @@ export const MyPosts = (props) => {
             <div className={styles.newPost}>
                 <div className={styles.textArea}>
                     <textarea
+                        onChange={onPostChange}
                         ref={newPostElement}
                         placeholder="Write your description here..."
-                        minLength={1}
-                        maxLength={500}
-                    ></textarea>
+                        value={props.newPostText}
+                    />
                 </div>
                 <Button onClick={addPost}>Add post</Button>
             </div>
