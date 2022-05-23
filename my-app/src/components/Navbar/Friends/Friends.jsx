@@ -1,6 +1,6 @@
 import React from 'react';
 import Friend from './Friend/Friend';
-import styles from './Friends.module.css';
+import styles from './Friends.module.scss';
 
 const Friends = (props) => {
     let friendsElements = props.friends.map((f) => (

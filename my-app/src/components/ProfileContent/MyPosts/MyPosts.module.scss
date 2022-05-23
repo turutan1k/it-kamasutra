@@ -33,6 +33,11 @@ button {
     color: #fff;
 }
 
+button:hover {
+    background-color: rgba(0, 0, 215);
+    transition: 0.3s linear;
+}
+
 .posts {
     margin-top: 10px;
 }
@@ -47,5 +52,5 @@ button {
     font-family: 'Orelega One', cursive;
     font-family: 'Pridi', serif;
     color: #fff;
-    border:1px solid rgba(0, 0, 100);
+    border: 1px solid rgba(0, 0, 100);
 }
