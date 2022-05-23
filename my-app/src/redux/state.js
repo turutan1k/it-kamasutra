@@ -53,15 +53,19 @@ let store = {
             ],
         },
     },
+    _callSubscriber() {
+        console.log('state is changed');
+    },
+
     getState() {
         debugger;
         return this._state;
     },
-    _callSubscriber() {
-        console.log('state is changed');
+    subscribe(observer) {
+        this._callSubscriber = observer; // паттерн наблюдатель
     },
-    addPost() {
-        debugger;
+
+    _addPost() {
         let newPost = {
             id: 5,
             message: this._state.profilePage.newPostText,
@@ -71,12 +75,16 @@ let store = {
         this._state.profilePage.newPostText = '';
         this._callSubscriber(this._state);
     },
-    updateNewPostText(newText) {
+    _updateNewPostText(newText) {
         this._state.profilePage.newPostText = newText;
         this._callSubscriber(this._state);
     },
-    subscribe(observer) {
-        this._callSubscriber = observer; // паттерн наблюдатель
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            this._addPost();
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._updateNewPostText(action.newText);
+        }
     },
 };
 
