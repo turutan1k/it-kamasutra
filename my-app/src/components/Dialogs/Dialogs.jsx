@@ -3,14 +3,15 @@ import styles from './Dialogs.module.scss';
 import DialogItem from './DialogItem';
 import Message from './Message';
 import { Button } from 'antd';
-import {RightCircleOutlined } from '@ant-design/icons';
+import { RightCircleOutlined } from '@ant-design/icons';
+import {
+    sendMessageActionCreator,
+    updateNewMessageTextActionCreator,
+} from '../../redux/state';
 
 export const Dialogs = (props) => {
-    let newMessageElement = React.useRef();
-    let addMessage = () => {
-        let text = newMessageElement.current.value;
-        alert(text);
-    };
+    debugger;
+
     //*dialogs.map
     let dialogsElements = props.state.dialogs.map((d) => (
         <DialogItem name={d.name} id={d.id} key={d.id} />
@@ -19,6 +20,15 @@ export const Dialogs = (props) => {
     let messagesElements = props.state.messages.map((m) => (
         <Message message={m.message} key={m.id} />
     ));
+    let newMessageText = props.state.newMessageText;
+
+    let onSendMessageClick = () => {
+        props.dispatch(sendMessageActionCreator());
+    };
+    let onNewMessageChange = (e) => {
+        let message = e.target.value;
+        props.dispatch(updateNewMessageTextActionCreator(message));
+    };
 
     return (
         <div className={styles.dialogs}>
@@ -27,11 +37,15 @@ export const Dialogs = (props) => {
             <div></div>
             <div className={styles.messages}>
                 <textarea
-                    ref={newMessageElement}
+                    value={newMessageText}
+                    onChange={onNewMessageChange} //*функция вызывается textarea, когда будут происходить изменения
                     placeholder="Write a message..."
                     className={styles.messageTextarea}
                 ></textarea>
-                <Button className={styles.messageButton} onClick={addMessage}>
+                <Button
+                    className={styles.messageButton}
+                    onClick={onSendMessageClick}
+                >
                     <RightCircleOutlined />
                 </Button>
             </div>

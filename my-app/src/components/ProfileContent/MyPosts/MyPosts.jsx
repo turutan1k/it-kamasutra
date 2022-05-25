@@ -3,6 +3,10 @@ import styles from './MyPosts.module.scss';
 import Post from './Post/Post';
 
 import { Button } from 'antd';
+import {
+    addPostActionCreator,
+    updateNewPostTextActionCreator,
+} from '../../../redux/state';
 
 export const MyPosts = (props) => {
     let postsElements = props.posts.map((p) => (
@@ -12,12 +16,12 @@ export const MyPosts = (props) => {
     let newPostElement = React.useRef();
     let addPost = () => {
         // props.addPost();
-        props.dispatch({ type: 'ADD-POST' });
+        props.dispatch(addPostActionCreator());
     };
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.dispatch({ type: 'UPDATE-NEW-POST-TEXT', newText: text });
+        props.dispatch(updateNewPostTextActionCreator(text));
     };
 
     return (
