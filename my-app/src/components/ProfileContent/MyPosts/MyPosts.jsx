@@ -6,7 +6,7 @@ import { Button } from 'antd';
 import {
     addPostActionCreator,
     updateNewPostTextActionCreator,
-} from '../../../redux/state';
+} from '../../../redux/reducers/profilePageReducer';
 
 export const MyPosts = (props) => {
     let postsElements = props.posts.map((p) => (
@@ -28,15 +28,14 @@ export const MyPosts = (props) => {
         <div className={styles.postsBlock}>
             <h3>My posts</h3>
             <div className={styles.newPost}>
-                <div className={styles.textArea}>
-                    <textarea
-                        onChange={onPostChange}
-                        ref={newPostElement}
-                        placeholder="Write your description here..."
-                        value={props.newPostText}
-                    />
-                </div>
-                <Button onClick={addPost}>Add post</Button>
+                <textarea
+                className={styles.postArea}
+                    onChange={onPostChange}
+                    ref={newPostElement}
+                    placeholder="Write your description here..."
+                    value={props.newPostText}
+                />
+                <Button className={styles.postButton} onClick={addPost}>Add post</Button>
             </div>
             <div className={styles.posts}>{postsElements}</div>
         </div>

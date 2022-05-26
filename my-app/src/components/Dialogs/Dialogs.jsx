@@ -4,10 +4,8 @@ import DialogItem from './DialogItem';
 import Message from './Message';
 import { Button } from 'antd';
 import { RightCircleOutlined } from '@ant-design/icons';
-import {
-    sendMessageActionCreator,
-    updateNewMessageTextActionCreator,
-} from '../../redux/state';
+import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../../redux/reducers/dialogsPageReducer';
+
 
 export const Dialogs = (props) => {
     debugger;

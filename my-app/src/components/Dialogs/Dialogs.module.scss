@@ -13,26 +13,40 @@
     justify-content: center;
 }
 
-.dialogsItems{
-    
+.dialogsItems {
 }
 .messagesItems {
     background-color: blue;
 }
 
 .messageButton {
-    width: 40px;
+    width: 50px;
     height: 40px;
-    padding: 10px;
-    background-color: #00008e;
+    border: none;
+    background-color: rgba(0, 0, 200);
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .messageButton:hover {
-    transition: 0.2s linear;
-    background-color: rgba(0, 0, 125);
+    background-color: rgba(0, 0, 215);
+    transition: 0.3s linear;
 }
 
 .messageTextarea {
+    color: #fff;
+    letter-spacing: 2px;
+    background: rgba(0, 0, 142); /* Цвет фона */
+    border: 1px solid rgba(0, 0, 200); /* Параметры рамки */
+    padding: 10px; /* Поля */
+    width: 100%; /* Ширина */
+    height: 40px; /* Высота */
+    box-sizing: border-box; /* Алгоритм расчёта ширины */
+    font-size: 14px; /* Размер шрифта */
+    resize: none;
+    margin-top: 10px;
+    border-radius: 15px 0px 0px 15px;
     height: 40px;
     padding: 10px;
 }

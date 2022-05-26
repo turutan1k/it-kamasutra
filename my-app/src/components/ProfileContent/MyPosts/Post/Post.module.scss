@@ -24,4 +24,11 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 15px 15px;
+}
+
+.likes {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
 }
