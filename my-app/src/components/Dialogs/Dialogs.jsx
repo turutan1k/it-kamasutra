@@ -4,28 +4,25 @@ import DialogItem from './DialogItem';
 import Message from './Message';
 import { Button } from 'antd';
 import { RightCircleOutlined } from '@ant-design/icons';
-import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../../redux/reducers/dialogsPageReducer';
-
 
 export const Dialogs = (props) => {
-    debugger;
-
+    let state = props.dialogsPage;
     //*dialogs.map
-    let dialogsElements = props.state.dialogs.map((d) => (
+    let dialogsElements = state.dialogs.map((d) => (
         <DialogItem name={d.name} id={d.id} key={d.id} />
     ));
     //*messages.map
-    let messagesElements = props.state.messages.map((m) => (
+    let messagesElements = state.messages.map((m) => (
         <Message message={m.message} key={m.id} />
     ));
-    let newMessageText = props.state.newMessageText;
+    let newMessageText = state.newMessageText;
 
     let onSendMessageClick = () => {
-        props.dispatch(sendMessageActionCreator());
+        props.sendMessage();
     };
     let onNewMessageChange = (e) => {
         let message = e.target.value;
-        props.dispatch(updateNewMessageTextActionCreator(message));
+        props.updateNewMessageText(message);
     };
 
     return (
