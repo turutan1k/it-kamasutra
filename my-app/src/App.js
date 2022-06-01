@@ -15,16 +15,17 @@ function App(props) {
     return (
         <div className="app-wrapper">
             <Header />
-            <Navbar state={props.state.sideBar} />
+            <Navbar  />
+            {/* state={props.state.sideBar} */}
             <div className="app-wrapper-content">
                 <Routes>
                     <Route
                         path="/"
-                        element={<ProfileContent store={props.store} />}
+                        element={<ProfileContent/>}
                     />
                     <Route
                         path="/dialogs/*"
-                        element={<DialogsContainer store={props.store} />}
+                        element={<DialogsContainer/>}
                     />
                     <Route path="/news" element={<News />} />
                     <Route path="/music" element={<Music />} />

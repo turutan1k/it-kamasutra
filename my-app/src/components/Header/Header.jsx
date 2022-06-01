@@ -7,7 +7,7 @@ const Header = () => {
             <i>
                 <DribbbleSquareFilled style={{ width: '50px' }} />
             </i>
-            <div>Social Network</div>
+            <h2>Social Network</h2>
             <i>
                 <DribbbleSquareFilled style={{ width: '50px' }} />
             </i>

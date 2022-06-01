@@ -77,7 +77,7 @@ const Navbar = (props) => {
                         Settings
                     </NavLink>
                 </li>
-                <li className={styles.friends}>
+                {/* <li className={styles.friends}>
                     <div className={styles.item}>
                         <AliwangwangFilled
                             style={{ color: '#fff', padding: '5px' }}
@@ -85,7 +85,7 @@ const Navbar = (props) => {
                         Friends:
                     </div>
                     <Friends friends={props?.state?.friends} />
-                </li>
+                </li> */}
             </ul>
         </nav>
     );
