@@ -1,6 +1,3 @@
-import React from 'react';
-import Post from './Post/Post';
-
 import {
     addPostActionCreator,
     updateNewPostTextActionCreator,
@@ -16,7 +13,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
     return {
-        onPostChange: (text) => {
+        updateNewPostText: (text) => {
             dispatch(updateNewPostTextActionCreator(text));
         },
         addPost: () => {

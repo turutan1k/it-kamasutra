@@ -9,7 +9,7 @@ export const MyPosts = (props) => {
         <Post message={p.message} likesCount={p.likesCount} key={p.id} />
     ));
 
-    let newPostElement = React.useRef();
+    let newPostElement = React.createRef();
     let onAddPost = () => {
         props.addPost();
     };

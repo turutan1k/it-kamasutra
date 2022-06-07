@@ -21,18 +21,18 @@ let initialState = {
 const dialogsPageReducer = (state = initialState, action) => {
     switch (action.type) {
         case SEND_MESSAGE:
-            let messageText = state.newMessageText;
-            let newMessage = {
-                id: 4,
-                message: messageText,
+            let newMessage = state.newMessageText;
+            return {
+                ...state,
+                newMessageText: '',
+                messages: [...state.messages, { id: 6, message: newMessage }],
             };
-            state.messages.push(newMessage);
-            state.newMessageText = '';
-            return state;
-
+        //stateCopy.messages.push({ id: 6, message: newMessage });
         case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.newMessage;
-            return state;
+            return {
+                ...state,
+                newMessageText: action.newMessage,
+            };
         default:
             return state;
     }
